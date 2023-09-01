@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import './Profile.styled';
+//import './Profile.styled';
 import {
   ProfileDiv,
   ProfileDivDescr,
