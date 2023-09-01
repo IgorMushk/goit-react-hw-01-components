@@ -8,7 +8,6 @@ export const StatSection = styled.section`
   text-align: center;
   border-radius: 4px;
   box-shadow: 0 0 15px 2px #000000;
-  //box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
   background-color: #e7ecf2;
   padding-top: 20px;
 `;

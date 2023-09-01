@@ -3,8 +3,6 @@ import { FrendListItem, FrendName, FriendImg, FriendStatus } from "./FriendListI
 
 export const FriendListItem = ({ avatar, name, isOnline, id }) => {
     return (
-    //    console.log(avatar, name, isOnline)
-    //     <FrendListItem key={id}>
         <FrendListItem >
         {/* <FriendStatus isonline={isOnline}></FriendStatus> */}
         <FriendStatus status={isOnline ? 'true' : 'false'}></FriendStatus>
