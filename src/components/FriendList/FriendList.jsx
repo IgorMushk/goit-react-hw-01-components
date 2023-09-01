@@ -1,40 +1,63 @@
-import {
-  FrendListItem,
-  FrendName,
-  FriendImg,
-  FriendList,
-  FriendStatus,
-} from './FriendList.styled';
+//import { FriendListItem } from 'components/FriendListItem/FriendListItem';
+//import { FriendList } from './FriendList.styled';
+import { FriendListItem } from "components/FriendListItem/FriendListItem";
+import { FriendList } from "./FriendList.styled";
+
+// import {
+//   FrendListItem,
+//   FrendName,
+//   FriendImg,
+//   FriendList,
+//   FriendStatus,
+// } from './FriendList.styled';
 
 export const FriendsList = ({ friends }) => {
-  //console.log('friens', friends);
-   return (
+   //console.log('friens', friends);
+     return (
     <FriendList>
-    { friends.map(({id, avatar, isOnline, name}) =>(
-        <FrendListItem key={id}>
-        <FriendStatus isonline={isOnline}></FriendStatus>
-        <FriendImg
-          src={avatar}
-          alt="User avatar"
-          width="48"
+      {friends.map(friend => (
+        <FriendListItem
+          key={friend.id}
+          avatar={friend.avatar}
+          name={friend.name}
+          isOnline={friend.isOnline}
         />
-        <FrendName>{name}</FrendName>
-      </FrendListItem>
-    ))}
-   </FriendList>
-    
-    //   <FrendListItem>
-    //     <FriendStatus></FriendStatus>
-    //     <FriendImg
-    //       src="https://cdn-icons-png.flaticon.com/512/1998/1998592.png"
-    //       alt="User avatar"
-    //       width="48"
-    //     />
-    //     <FrendName>Mango</FrendName>
-    //</FrendListItem>
-
-  );
+      ))}
+    </FriendList>
+     )
 };
+
+
+// export const FriendsList = ({ friends }) => {
+//     //console.log('friens', friends);
+//      return (
+//       <FriendList>
+//       { friends.map(({id, avatar, isOnline, name}) =>(
+//           <FrendListItem key={id}>
+//           <FriendStatus isonline={isOnline}></FriendStatus>
+//           <FriendImg
+//             src={avatar}
+//             alt="User avatar"
+//             width="48"
+//           />
+//           <FrendName>{name}</FrendName>
+//         </FrendListItem>
+//       ))}
+//      </FriendList>
+      
+//       //   <FrendListItem>
+//       //     <FriendStatus></FriendStatus>
+//       //     <FriendImg
+//       //       src="https://cdn-icons-png.flaticon.com/512/1998/1998592.png"
+//       //       alt="User avatar"
+//       //       width="48"
+//       //     />
+//       //     <FrendName>Mango</FrendName>
+//       //</FrendListItem>
+  
+//     );
+//   };
+
 
 //<FriendStatus isOnline={isOnline}></FriendStatus>
 //<FriendStatus isonline={isOnline}></FriendStatus>
