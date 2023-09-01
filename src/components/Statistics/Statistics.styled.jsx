@@ -32,7 +32,7 @@ export const StatList = styled.ul`
 
 export const StatListItem = styled.li`
   background-color: ${props => props.color};
-  //width: 70px;
+  width: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
