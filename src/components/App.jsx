@@ -19,9 +19,9 @@ export const App = () => {
           avatar={user.avatar}
           stats={user.stats}
         />
-      </Container>
-      <Statistics title="Upload stats" stats={data} />
+        <Statistics title="Upload stats" stats={data} />
       {/* <Statistics stats={data} /> */}
+      </Container>
     </>
   );
 };

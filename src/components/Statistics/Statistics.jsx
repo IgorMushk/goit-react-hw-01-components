@@ -1,8 +1,10 @@
+import { StatSection } from "./Statistics.styled";
+
 export const Statistics = ({ title, stats }) => {
   // console.log('title', title);
   // console.log('stats', stats);
   return (
-    <section >
+    <StatSection >
       <h2 >Upload stats</h2>
 
       <ul >
@@ -23,7 +25,7 @@ export const Statistics = ({ title, stats }) => {
           <span >12%</span>
         </li>
       </ul>
-    </section>
+    </StatSection>
   );
 };
 
