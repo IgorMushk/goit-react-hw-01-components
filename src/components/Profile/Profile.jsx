@@ -1,31 +1,44 @@
-export const Profile = user => {
-  return (
-    <div>
-      <div>
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-          alt="User avatar"
-        />
-        <p>Petra Marica</p>
-        <p>@pmarica</p>
-        <p>Salvador, Brasil</p>
-      </div>
+import './Profile.styled';
+import {
+  ProfileDiv,
+  ProfileDivDescr,
+  ProfileImg,
+  ProfileLabel,
+  ProfileLocation,
+  ProfileQuantity,
+  ProfileStatsItem,
+  ProfileStatsList,
+  ProfileTag,
+  ProfileUserName,
+} from './Profile.styled';
+import { thousandSeparator } from 'js/thousandSeparato';
 
-      <ul>
-        <li>
-          <span>Followers</span>
-          <span>1000</span>
-        </li>
-        <li>
-          <span>Views</span>
-          <span>2000</span>
-        </li>
-        <li>
-          <span>Likes</span>
-          <span>3000</span>
-        </li>
-      </ul>
-    </div>
+export const Profile = user => {
+  //console.log('user', user);
+  return (
+    <ProfileDiv>
+      <ProfileDivDescr>
+        <ProfileImg src={user.avatar} alt="User avatar" />
+        <ProfileUserName>{user.username}</ProfileUserName>
+        <ProfileTag>@{user.tag}</ProfileTag>
+        <ProfileLocation>{user.location}</ProfileLocation>
+      </ProfileDivDescr>
+
+      <ProfileStatsList>
+        <ProfileStatsItem>
+          <ProfileLabel>Followers</ProfileLabel>
+          <ProfileQuantity>{user.stats.followers}</ProfileQuantity>
+        </ProfileStatsItem>
+        <ProfileStatsItem>
+          <ProfileLabel>Views</ProfileLabel>
+          <ProfileQuantity>{thousandSeparator(user.stats.views)}</ProfileQuantity>
+        </ProfileStatsItem>
+        <ProfileStatsItem>
+          <ProfileLabel>Likes</ProfileLabel>
+          <ProfileQuantity>{user.stats.likes}</ProfileQuantity>
+        </ProfileStatsItem>
+      </ProfileStatsList>
+    </ProfileDiv>
   );
 };
 
