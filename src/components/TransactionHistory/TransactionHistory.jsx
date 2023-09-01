@@ -1,53 +1,54 @@
 import PropTypes from 'prop-types';
+import { TransTable, TransTableTd, TransTableTh, TransTableTr } from './TransactionHistory.styled';
 
 export const TransactionHistory = (items) => {
   //console.log(items);
   return (
-    <table >
+    <TransTable >
       <thead>
-        <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
-        </tr>
+        <TransTableTr>
+          <TransTableTh>Type</TransTableTh>
+          <TransTableTh>Amount</TransTableTh>
+          <TransTableTh>Currency</TransTableTh>
+        </TransTableTr>
       </thead>
 
       <tbody>
-        <tr>
-          <td>Invoice</td>
-          <td>125</td>
-          <td>USD</td>
-        </tr>
-        <tr>
-          <td>Withdrawal</td>
-          <td>85</td>
-          <td>USD</td>
-        </tr>
+        <TransTableTr>
+          <TransTableTd>Invoice</TransTableTd>
+          <TransTableTd>125</TransTableTd>
+          <TransTableTd>USD</TransTableTd>
+        </TransTableTr>
+        <TransTableTr>
+          <TransTableTd>Withdrawal</TransTableTd>
+          <TransTableTd>85</TransTableTd>
+          <TransTableTd>USD</TransTableTd>
+        </TransTableTr>
       </tbody>
-    </table>
+    </TransTable>
   );
 };
 
-{/* <table class="transaction-history">
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Amount</th>
-      <th>Currency</th>
-    </tr>
-  </thead>
+// {/* <table class="transaction-history">
+//   <thead>
+//     <tr>
+//       <th>Type</th>
+//       <th>Amount</th>
+//       <th>Currency</th>
+//     </tr>
+//   </thead>
 
-  <tbody>
-    <tr>
-      <td>Invoice</td>
-      <td>125</td>
-      <td>USD</td>
-    </tr>
-    <tr>
-      <td>Withdrawal</td>
-      <td>85</td>
-      <td>USD</td>
-    </tr>
-  </tbody>
-</table> */}
+//   <tbody>
+//     <tr>
+//       <td>Invoice</td>
+//       <td>125</td>
+//       <td>USD</td>
+//     </tr>
+//     <tr>
+//       <td>Withdrawal</td>
+//       <td>85</td>
+//       <td>USD</td>
+//     </tr>
+//   </tbody>
+// </table> */}
 
