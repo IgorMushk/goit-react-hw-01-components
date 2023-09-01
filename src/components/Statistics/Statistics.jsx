@@ -3,28 +3,18 @@ import {getRandomHexColor} from 'js/randomColor'
 
 export const Statistics = ({ title, stats }) => {
   // console.log('title', title);
-  console.log('stats', stats);
+  //console.log('stats', stats);
   return (
     <StatSection >
       { title && <StatTitle >{title}</StatTitle>}
 
-      <StatList >
-        <StatListItem color={getRandomHexColor()}>
-          <StatLabel >.docx</StatLabel>
-          <StatPercent >4%</StatPercent>
-        </StatListItem>
-        <StatListItem color={getRandomHexColor()}>
-          <StatLabel >.mp3</StatLabel>
-          <StatPercent >14%</StatPercent>
-        </StatListItem>
-        <StatListItem color={getRandomHexColor()}>
-          <StatLabel >.pdf</StatLabel>
-          <StatPercent >41%</StatPercent>
-        </StatListItem>
-        <StatListItem color={getRandomHexColor()}>
-          <StatLabel >.mp4</StatLabel>
-          <StatPercent >12%</StatPercent>
-        </StatListItem>
+      <StatList > 
+        { stats.map(({id, label, percentage}) =>(
+            <StatListItem key={id} color={getRandomHexColor()}>
+            <StatLabel >{label}</StatLabel>
+            <StatPercent >{percentage}%</StatPercent>
+          </StatListItem>
+        ))}
       </StatList>
     </StatSection>
   );
