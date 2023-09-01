@@ -33,9 +33,17 @@ export const FriendStatus = styled.span`
   height: 24px;
   margin-right: 16px;
   border-radius: 100px;
-  background-color: #00ff00;
+  //background-color: #00ff00;
+  background-color: ${({isonline}) => (isonline ? '#00ff00' : '#ff0000')};
 `;
-////background-color: ${props => (props.isOnline ? '#00ff00' : '#ff0000')};
+//background-color: ${props => (props.isonline ? '#00ff00' : '#ff0000')};
+// export const FriendStatus = styled('span')({
+//     width: '24px',
+//     height: '24px',
+//     marginRight: '16px',
+//     borderRadius: '100px',
+//     backgroundColor: ({isonline}) => `${isonline ? '#00ff00' : '#ff0000'}`,
+// });
 
 export const FriendImg = styled.img`
   width: 50px;
