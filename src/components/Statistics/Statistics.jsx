@@ -1,30 +1,31 @@
-import { StatSection } from "./Statistics.styled";
+import { StatLabel, StatList, StatListItem, StatPercent, StatSection, StatTitle } from "./Statistics.styled";
+import {getRandomHexColor} from 'js/randomColor'
 
 export const Statistics = ({ title, stats }) => {
   // console.log('title', title);
   // console.log('stats', stats);
   return (
     <StatSection >
-      <h2 >Upload stats</h2>
+      <StatTitle >Upload stats</StatTitle>
 
-      <ul >
-        <li >
-          <span >.docx</span>
-          <span >4%</span>
-        </li>
-        <li >
-          <span >.mp3</span>
-          <span >14%</span>
-        </li>
-        <li >
-          <span >.pdf</span>
-          <span >41%</span>
-        </li>
-        <li >
-          <span >.mp4</span>
-          <span >12%</span>
-        </li>
-      </ul>
+      <StatList >
+        <StatListItem color={getRandomHexColor()}>
+          <StatLabel >.docx</StatLabel>
+          <StatPercent >4%</StatPercent>
+        </StatListItem>
+        <StatListItem color={getRandomHexColor()}>
+          <StatLabel >.mp3</StatLabel>
+          <StatPercent >14%</StatPercent>
+        </StatListItem>
+        <StatListItem color={getRandomHexColor()}>
+          <StatLabel >.pdf</StatLabel>
+          <StatPercent >41%</StatPercent>
+        </StatListItem>
+        <StatListItem color={getRandomHexColor()}>
+          <StatLabel >.mp4</StatLabel>
+          <StatPercent >12%</StatPercent>
+        </StatListItem>
+      </StatList>
     </StatSection>
   );
 };
