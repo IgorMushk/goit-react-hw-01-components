@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 
 export const ProfileDiv = styled.div`
-  width: 400px;
+  width: 390px;
   margin: 20px 20px;
   display: flex;
   flex-direction: column;
@@ -62,26 +62,30 @@ export const ProfileLocation = styled.p`
 `;
 
 export const ProfileStatsList = styled.ul`
-width: 100%;
-//width: 400px;
-padding: 0;
-margin-top: 0;
-margin-bottom: 0;
-margin-left: 0;
-margin-right: 0;
-display: flex;
-justify-content: space-evenly;
-gap 10px;
-border: 2px solid lightgrey;
+  width: 100%;
+  //width: 400px;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  justify-content: space-evenly;
+  //gap 10px;
+  border: 2px solid lightgrey;
 `;
 
 export const ProfileStatsItem = styled.li`
+  width: 130px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 14px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 2px 0px;
 `;
 
 export const ProfileLabel = styled.span`
-  margin-top: 20px;
+  //margin-top: 20px;
   font-size: 20px;
   font-weight: 600;
   color: #999999;
@@ -91,6 +95,6 @@ export const ProfileQuantity = styled.span`
   margin-top: 10px;
   font-size: 24px;
   font-weight: 600;
-  margin-bottom: 40px;
+  //margin-bottom: 40px;
   color: #000000;
 `;
