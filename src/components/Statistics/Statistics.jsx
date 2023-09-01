@@ -3,10 +3,10 @@ import {getRandomHexColor} from 'js/randomColor'
 
 export const Statistics = ({ title, stats }) => {
   // console.log('title', title);
-  // console.log('stats', stats);
+  console.log('stats', stats);
   return (
     <StatSection >
-      <StatTitle >Upload stats</StatTitle>
+      { title && <StatTitle >{title}</StatTitle>}
 
       <StatList >
         <StatListItem color={getRandomHexColor()}>
@@ -52,3 +52,40 @@ export const Statistics = ({ title, stats }) => {
 //    </li>
 //  </ul>
 //</section>
+
+// [
+//     { "id": "id-1", "label": ".docx", "percentage": 22 },
+//     { "id": "id-2", "label": ".pdf", "percentage": 4 },
+//     { "id": "id-3", "label": ".mp3", "percentage": 17 },
+//     { "id": "id-4", "label": ".psd", "percentage": 47 },
+//     { "id": "id-5", "label": ".pdf", "percentage": 10 }
+//   ]
+
+// export const Statistics = ({ title, stats }) => {
+//     // console.log('title', title);
+//     // console.log('stats', stats);
+//     return (
+//       <StatSection >
+//         { title && <StatTitle >{title}</StatTitle>}
+  
+//         <StatList >
+//           <StatListItem color={getRandomHexColor()}>
+//             <StatLabel >.docx</StatLabel>
+//             <StatPercent >4%</StatPercent>
+//           </StatListItem>
+//           <StatListItem color={getRandomHexColor()}>
+//             <StatLabel >.mp3</StatLabel>
+//             <StatPercent >14%</StatPercent>
+//           </StatListItem>
+//           <StatListItem color={getRandomHexColor()}>
+//             <StatLabel >.pdf</StatLabel>
+//             <StatPercent >41%</StatPercent>
+//           </StatListItem>
+//           <StatListItem color={getRandomHexColor()}>
+//             <StatLabel >.mp4</StatLabel>
+//             <StatPercent >12%</StatPercent>
+//           </StatListItem>
+//         </StatList>
+//       </StatSection>
+//     );
+//   };

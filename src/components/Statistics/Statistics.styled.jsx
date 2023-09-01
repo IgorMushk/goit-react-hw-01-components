@@ -15,7 +15,7 @@ export const StatSection = styled.section`
 
 export const StatTitle = styled.h2`
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   font-size: 28px;
   text-transform: uppercase;
   color: #626669;
@@ -43,9 +43,11 @@ export const StatListItem = styled.li`
 
 export const StatLabel = styled.span`
   font-size: 18px;
+  color: #e7ecf2;
 `;
 
 export const StatPercent = styled.span`
   font-size: 24px;
   font-weight: 600;
+  color: #e7ecf2;
 `;
