@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import './Profile.styled';
 import {
   ProfileDiv,
@@ -13,34 +14,47 @@ import {
 } from './Profile.styled';
 import { thousandSeparator } from 'js/thousandSeparato';
 
-export const Profile = user => {
+export const Profile = ({avatar,username,tag,location,stats}) => {
   //console.log('user', user);
   return (
     <ProfileDiv>
       <ProfileDivDescr>
-        <ProfileImg src={user.avatar} alt="User avatar" />
-        <ProfileUserName>{user.username}</ProfileUserName>
-        <ProfileTag>@{user.tag}</ProfileTag>
-        <ProfileLocation>{user.location}</ProfileLocation>
+        <ProfileImg src={avatar} alt="User avatar" />
+        <ProfileUserName>{username}</ProfileUserName>
+        <ProfileTag>@{tag}</ProfileTag>
+        <ProfileLocation>{location}</ProfileLocation>
       </ProfileDivDescr>
 
       <ProfileStatsList>
         <ProfileStatsItem>
           <ProfileLabel>Followers</ProfileLabel>
-          <ProfileQuantity>{user.stats.followers}</ProfileQuantity>
+          <ProfileQuantity>{stats.followers}</ProfileQuantity>
         </ProfileStatsItem>
         <ProfileStatsItem>
           <ProfileLabel>Views</ProfileLabel>
-          <ProfileQuantity>{thousandSeparator(user.stats.views)}</ProfileQuantity>
+          <ProfileQuantity>{thousandSeparator(stats.views)}</ProfileQuantity>
         </ProfileStatsItem>
         <ProfileStatsItem>
           <ProfileLabel>Likes</ProfileLabel>
-          <ProfileQuantity>{user.stats.likes}</ProfileQuantity>
+          <ProfileQuantity>{stats.likes}</ProfileQuantity>
         </ProfileStatsItem>
       </ProfileStatsList>
     </ProfileDiv>
   );
 };
+
+Profile.protoType ={
+    avatar: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    stats: PropTypes.shape({
+        followers: PropTypes.number.isRequired,
+        views: PropTypes.number.isRequired,
+        links: PropTypes.number.isRequired,
+    }).isRequired,
+};
+
 
 // username — имя пользователя
 // tag — тег в социальной сети без @

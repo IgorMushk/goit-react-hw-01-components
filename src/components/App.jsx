@@ -2,7 +2,7 @@ import user from '../data/user.json';
 import { Container } from './App.styled';
 import { Profile } from './Profile/Profile';
 
-console.log(user);
+//console.log(user);
 
 export const App = () => {
   //return <Container>React homework template</Container>;

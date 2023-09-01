@@ -13,6 +13,11 @@ export const ProfileDiv = styled.div`
   box-shadow: 0 0 15px 2px #000000;
   padding-top: 40px;
   overflow: hidden;
+  transition: scale 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  &:hover {
+    scale: 0.98;
+    cursor: pointer;
+  }
 `;
 
 export const ProfileDivDescr = styled.div`
@@ -67,7 +72,7 @@ margin-right: 0;
 display: flex;
 justify-content: space-evenly;
 gap 10px;
-border: 2px solid lightgrey
+border: 2px solid lightgrey;
 `;
 
 export const ProfileStatsItem = styled.li`
@@ -87,5 +92,5 @@ export const ProfileQuantity = styled.span`
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 40px;
-  color: #00000;
+  color: #000000;
 `;
