@@ -25,7 +25,10 @@ export const TransTableTr = styled.tr`
     scale: 1.03;
     cursor: pointer;
   } */
+  tbody >  &:hover {
   cursor: pointer;
+  font-weight: 700;
+  }
 `;
 
 export const TransTableTh = styled.th`
