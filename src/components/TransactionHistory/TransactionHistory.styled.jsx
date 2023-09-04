@@ -33,7 +33,8 @@ export const TransTableTr = styled.tr`
 
 export const TransTableTh = styled.th`
   //padding: 10px 100px;
-  padding: 10px 60px;
+  //padding: 10px 60px;
+  padding: 10px 40px;
   //padding-top: 10px;
   //padding-bottom: 10px;
   color: #ffffff;
@@ -47,8 +48,9 @@ export const TransTableTd = styled.td`
   color: #656565;
   &:nth-of-type(1) {
     //padding-left: 100px;
-    padding-left: 60px;
+    padding-left: 30px;
     text-align: left;
+    //text-align: center;
     text-transform: capitalize;
   }
   &:nth-of-type(2) {
