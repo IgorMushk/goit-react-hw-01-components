@@ -34,7 +34,7 @@ export const TransTableTr = styled.tr`
 export const TransTableTh = styled.th`
   //padding: 10px 100px;
   //padding: 10px 60px;
-  padding: 10px 40px;
+  padding: 10px 44px;
   //padding-top: 10px;
   //padding-bottom: 10px;
   color: #ffffff;
