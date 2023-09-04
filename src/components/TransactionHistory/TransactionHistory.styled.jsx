@@ -25,21 +25,30 @@ export const TransTableTr = styled.tr`
     scale: 1.03;
     cursor: pointer;
   } */
-  tbody >  &:hover {
-  cursor: pointer;
-  font-weight: 700;
+  tbody > &:hover {
+    cursor: pointer;
+    font-weight: 700;
   }
 `;
 
 export const TransTableTh = styled.th`
   //padding: 10px 100px;
   //padding: 10px 60px;
-  padding: 10px 44px;
+  //padding: 10px 44px;
   //padding-top: 10px;
   //padding-bottom: 10px;
   color: #ffffff;
   background-color: #00bcd5;
   text-transform: uppercase;
+  &:nth-of-type(1) {
+    padding: 10px 48px;
+  }
+  &:nth-of-type(2) {
+    padding: 10px 24px;
+  }
+  &:nth-of-type(3) {
+    padding: 10px 24px;
+  }
 `;
 
 export const TransTableTd = styled.td`
